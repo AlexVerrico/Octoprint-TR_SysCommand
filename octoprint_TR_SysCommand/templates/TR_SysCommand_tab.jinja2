@@ -1,0 +1,20 @@
+<script src="{{ url_for("static", filename="js/lib/jquery/jquery.min.js") }}"></script>
+<script src="{{ url_for("static", filename="js/lib/lodash.min.js") }}"></script>
+<script type="text/javascript" src="{{ url_for("static", filename="webassets/packed_client.js") }}"></script>
+
+<button id="TR_SysCommand_test" href="#" onclick="TR_SysCommand_test_over_temp()">Run over temp command</button><br/><br/>
+
+<button id="TR_SysCommand_test" href="#" onclick="TR_SysCommand_test_under_temp()">Run under temp command</button><br/><br/>
+
+<button id="TR_SysCommand_test" href="#" onclick="TR_SysCommand_test_either()">Run the command to be run when any runaway is detected</button>
+<script>
+    function TR_SysCommand_test_over_temp(){
+        OctoPrint.simpleApiCommand('TR_SysCommand', 'run_over_command');
+    }
+    function TR_SysCommand_test_under_temp(){
+        OctoPrint.simpleApiCommand('TR_SysCommand', 'run_under_command');
+    }
+    function TR_SysCommand_test_either(){
+        OctoPrint.simpleApiCommand('TR_SysCommand', 'run_either_command');
+    }
+</script>

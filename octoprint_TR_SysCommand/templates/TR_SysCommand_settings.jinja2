@@ -1,0 +1,20 @@
+<form class="form-horizontal">
+    <div class="control-group">
+        <div class="controls">
+            <h4>Commands</h4>
+            All of the following commands accept the variables <code>{heater_id}</code>, <code>{current_temp}</code>, and <code>{set_temp}</code>.<br/>
+			<h5>Over Temp Runaway Command</h5>
+			The system command to be called if an over temperature thermal runaway is triggered.<br/>
+			<input type="text" data-bind="value: settings.plugins.TR_SysCommand.over_command"><br/>
+
+            <h5>Under Temp Runaway Command</h5>
+			The system command to be called if an under temperature thermal runaway is triggered.<br/>
+			<input type="text" data-bind="value: settings.plugins.TR_SysCommand.under_command"><br/>
+
+            <h5>Either Runaway Command</h5>
+			The system command to be called if either type of thermal runaway is triggered.<br/>
+			<input type="text" data-bind="value: settings.plugins.TR_SysCommand.either_command"><br/>
+        </div>
+    </div>
+</form>
+
